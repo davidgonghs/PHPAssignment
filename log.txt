@@ -1,0 +1,52 @@
+2021-07-05 23:14:06 执行语句：select * from user where  password='5b3ef43905fd037de5017c2aa06c8a8a39d80098'and email='david@gmail.com'  且执行成功
+2021-07-05 23:14:06 执行语句：select count(*) from books   且执行成功
+2021-07-05 23:14:06 执行语句：select count(*) from book_type   且执行成功
+2021-07-05 23:14:06 执行语句：select count(*) from user   且执行成功
+2021-07-05 23:14:06 执行语句：select count(*) from place   且执行成功
+2021-07-05 23:14:06 执行语句：select count(*) from shelf   且执行成功
+2021-07-05 23:14:06 将执行语句：select  *,(select count(*) from books where books.book_type_id = book_type.type_id) as bt_book_number from book_type where EXISTS(select * from books where book_type.type_id=books.book_type_id) ORDER BY bt_book_number DESC limit 0,5 
+2021-07-05 23:14:06 执行语句：select  *,(select count(*) from books where books.book_type_id = book_type.type_id) as bt_book_number from book_type where EXISTS(select * from books where book_type.type_id=books.book_type_id) ORDER BY bt_book_number DESC limit 0,5  且执行成功
+2021-07-05 23:14:06 将执行语句：select  *,(select count(*) from books where books.place_id = place.place_id) as place_book_number from place  
+2021-07-05 23:14:06 执行语句：select  *,(select count(*) from books where books.place_id = place.place_id) as place_book_number from place   且执行成功
+2021-07-05 23:14:06 执行语句：select count(*) from books b   且执行成功
+2021-07-05 23:14:06 将执行语句：select b.book_id,b.author,b.book_title,b.book_img,b.book_type_id,bt.type_name,b.isbn_number,b.price,p.place_name,s.shelf_name,u.photo,b.create_user_id  from books b,place p,shelf s,`user` u,book_type bt where b.book_type_id = bt.type_id and b.place_id = p.place_id and b.shelf_id = s.shelf_id and b.create_user_id = u.user_id   limit 0,10
+2021-07-05 23:14:06 执行语句：select b.book_id,b.author,b.book_title,b.book_img,b.book_type_id,bt.type_name,b.isbn_number,b.price,p.place_name,s.shelf_name,u.photo,b.create_user_id  from books b,place p,shelf s,`user` u,book_type bt where b.book_type_id = bt.type_id and b.place_id = p.place_id and b.shelf_id = s.shelf_id and b.create_user_id = u.user_id   limit 0,10 且执行成功
+2021-07-05 23:14:06 将执行语句：select type_id,type_name from book_type  
+2021-07-05 23:14:06 执行语句：select type_id,type_name from book_type   且执行成功
+2021-07-05 23:14:06 将执行语句：select place_id,place_name from place  
+2021-07-05 23:14:06 执行语句：select place_id,place_name from place   且执行成功
+2021-07-05 23:14:06 将执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '1' 
+2021-07-05 23:14:06 执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '1'  且执行成功
+2021-07-05 23:14:06 将执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45ca309a-5d52-11eb-997b-001fbc' 
+2021-07-05 23:14:06 执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45ca309a-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:06 将执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45cd2ce4-5d52-11eb-997b-001fbc' 
+2021-07-05 23:14:06 执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45cd2ce4-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:06 将执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45cf441f-5d52-11eb-997b-001fbc' 
+2021-07-05 23:14:06 执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45cf441f-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:06 将执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45d25739-5d52-11eb-997b-001fbc' 
+2021-07-05 23:14:06 执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45d25739-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:06 将执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45d4c361-5d52-11eb-997b-001fbc' 
+2021-07-05 23:14:06 执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '45d4c361-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:06 将执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '604ece81df80e' 
+2021-07-05 23:14:06 执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '604ece81df80e'  且执行成功
+2021-07-05 23:14:06 将执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '606c03c164be3' 
+2021-07-05 23:14:06 执行语句：select s.shelf_id,s.shelf_name from shelf s where s.place_id = '606c03c164be3'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from place   且执行成功
+2021-07-05 23:14:10 将执行语句：select p.place_id,p.place_name,p.create_user_id,u.photo from place as p , `user` as u where p.create_user_id = u.user_id  limit 0,10
+2021-07-05 23:14:10 执行语句：select p.place_id,p.place_name,p.create_user_id,u.photo from place as p , `user` as u where p.create_user_id = u.user_id  limit 0,10 且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from shelf where place_id='1'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from books where place_id='1'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from shelf where place_id='45ca309a-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from books where place_id='45ca309a-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from shelf where place_id='45cd2ce4-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from books where place_id='45cd2ce4-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from shelf where place_id='45cf441f-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from books where place_id='45cf441f-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from shelf where place_id='45d25739-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from books where place_id='45d25739-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from shelf where place_id='45d4c361-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from books where place_id='45d4c361-5d52-11eb-997b-001fbc'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from shelf where place_id='604ece81df80e'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from books where place_id='604ece81df80e'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from shelf where place_id='606c03c164be3'  且执行成功
+2021-07-05 23:14:10 执行语句：select count(*) from books where place_id='606c03c164be3'  且执行成功
